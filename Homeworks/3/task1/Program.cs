@@ -14,14 +14,14 @@ for (int i = 0; i < palindrom.Length; i++);
 
 Console.WriteLine("Insert 5 digits");
 string x = Console.ReadLine();
+int i = 0;
+if (x.Length != 5)
+    Console.WriteLine("It isn't 5 digits number");
 
-    Console.WriteLine("It is palindrom");
-    Console.ReadKey(true);
-bool (int  x);
-for (int i = 0; i < x.Length; i++)
-  if (x[i] == x[x.Length -1 - i])
-     return true;
-        
+else if (x[i] == x[x.Length -1 - i])
+    {  i++;  
+     Console.WriteLine("It is palindrom");
+    }
+   
    else
-    return false;
     Console.WriteLine("It is not a palindrom");

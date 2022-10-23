@@ -1,9 +1,6 @@
 ﻿
-Console.WriteLine("Введите число: =");
+Console.WriteLine("Введите число: ");
 double count = int.Parse(Console.ReadLine());
-
-
-//Console.WriteLine(GetCube(count));  
 
 double GetCube (double count)
 {
@@ -15,4 +12,4 @@ double GetCube (double count)
     }
     return cube;
 }
-Console.WriteLine(" ");
+Console.WriteLine(GetCube(count);
