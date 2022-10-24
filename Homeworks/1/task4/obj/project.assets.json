@@ -8,24 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/Users/uliamanikina/.nuget/packages/": {}
+    "C:\\Users\\meow\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/uliamanikina/Desktop/Repo/Programming/Homeworks/1/task4/task4.csproj",
+      "projectUniqueName": "C:\\Users\\meow\\desktop\\REPO3\\programming\\Homeworks\\1\\task4\\task4.csproj",
       "projectName": "task4",
-      "projectPath": "/Users/uliamanikina/Desktop/Repo/Programming/Homeworks/1/task4/task4.csproj",
-      "packagesPath": "/Users/uliamanikina/.nuget/packages/",
-      "outputPath": "/Users/uliamanikina/Desktop/Repo/Programming/Homeworks/1/task4/obj/",
+      "projectPath": "C:\\Users\\meow\\desktop\\REPO3\\programming\\Homeworks\\1\\task4\\task4.csproj",
+      "packagesPath": "C:\\Users\\meow\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\meow\\desktop\\REPO3\\programming\\Homeworks\\1\\task4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/uliamanikina/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\meow\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -59,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

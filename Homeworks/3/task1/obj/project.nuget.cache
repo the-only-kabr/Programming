@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "VFBKBp/QIt6av/8lwLCMoCF7Ov9ShxPvYcJcuFNo8S5vGdu7mi+wR30w1wztmlmkb0ZwgZcF+i8McsvGc5PBeQ==",
   "success": true,
   "projectFilePath": "/Users/uliamanikina/Desktop/Repo/Programming/Homeworks/3/task1/task1.csproj",
+=======
+  "dgSpecHash": "AoGf706TPCbCvO73mV5UtmUOagm+jachS9jnXmZVSvPwTSmQbMaX2ixNB8+auGRH9jdeoq6DGS3UBVgfGG9QTg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\meow\\Desktop\\REPO3\\Programming\\homeworks\\3\\task1\\task1.csproj",
+>>>>>>> 258de455cb8ab6045df6d555061e9cae0d3baf3f
   "expectedPackageFiles": [],
   "logs": []
 }

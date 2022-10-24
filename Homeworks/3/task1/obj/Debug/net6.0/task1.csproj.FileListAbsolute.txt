@@ -1,5 +1,23 @@
+<<<<<<< HEAD
 /Users/uliamanikina/Desktop/Repo/Programming/Homeworks/3/task1/obj/Debug/net6.0/task1.csproj.AssemblyReference.cache
 /Users/uliamanikina/Desktop/Repo/Programming/Homeworks/3/task1/obj/Debug/net6.0/task1.GeneratedMSBuildEditorConfig.editorconfig
 /Users/uliamanikina/Desktop/Repo/Programming/Homeworks/3/task1/obj/Debug/net6.0/task1.AssemblyInfoInputs.cache
 /Users/uliamanikina/Desktop/Repo/Programming/Homeworks/3/task1/obj/Debug/net6.0/task1.AssemblyInfo.cs
 /Users/uliamanikina/Desktop/Repo/Programming/Homeworks/3/task1/obj/Debug/net6.0/task1.csproj.CoreCompileInputs.cache
+=======
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\task1.csproj.AssemblyReference.cache
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\task1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\task1.AssemblyInfoInputs.cache
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\task1.AssemblyInfo.cs
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\task1.csproj.CoreCompileInputs.cache
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\bin\Debug\net6.0\task1.exe
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\bin\Debug\net6.0\task1.deps.json
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\bin\Debug\net6.0\task1.runtimeconfig.json
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\bin\Debug\net6.0\task1.dll
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\bin\Debug\net6.0\task1.pdb
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\task1.dll
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\refint\task1.dll
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\task1.pdb
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\task1.genruntimeconfig.cache
+C:\Users\meow\Desktop\REPO3\Programming\Homeworks\3\task1\obj\Debug\net6.0\ref\task1.dll
+>>>>>>> 258de455cb8ab6045df6d555061e9cae0d3baf3f

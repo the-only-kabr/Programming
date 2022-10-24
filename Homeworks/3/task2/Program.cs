@@ -1,0 +1,20 @@
+﻿Console.WriteLine("Insert point A(x) coordinate");
+//string a = Console.ReadLine(); 
+int a1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Insert point A(y) coordinate");
+int a2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Insert point A(z) coordinate");
+int a3 = int.Parse(Console.ReadLine());
+Console.WriteLine("Insert point B(x) coordinate");
+//string b = Console.ReadLine(); 
+int b1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Insert point B(y) coordinate");
+int b2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Insert point B(z) coordinate");
+int b3 = int.Parse(Console.ReadLine());
+
+int x = (b1 - a1);
+int y = (b2 - a2);
+int z = (b3 - a3);
+double result = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2) + Math.Pow(z, 2));
+Console.WriteLine(result);
