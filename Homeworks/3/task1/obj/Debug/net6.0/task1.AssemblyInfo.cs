@@ -5,7 +5,7 @@
 //
 //     Changes to this file may cause incorrect behavior and will be lost if
 //     the code is regenerated.
-=======
+
 //     Этот код создан программой.
 //     Исполняемая версия:4.0.30319.42000
 //
