@@ -1,52 +1,56 @@
-﻿/*Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+/*Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
 [3 7 22 2 78] -> 76
 */
 
-int[] array = new int[10];
+double[] CreateArray(int size)
 
-int[] CreateArray(int[] array)
 {
-	Random random = new Random();
-
-	for (int i = 0; i < array.Length; i++)
-	{
-		array[i] = random.Next(1, 20);
-	}
-	return array;
+    double[] array = new double[size];
+    Random rnd = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = Math.Round(rnd.Next(0, 100) + rnd.NextDouble(), 2);
+    }
+    return array;
 }
 
-void PrintArray(int[] array)
+string GetArray(double[] array)
 {
-	for (int i = 0; i < array.Length; i++)
-			{
-			Console.Write(array[i] + " ");
-		}
-		Console.WriteLine();
+    string res = string.Empty;
+    for (int i = 0; i < array.Length; i++)
+    {
+        res = res + $"{array[i]}  ";
+    }
+    return res;
 }
-CreateArray(array);
-PrintArray(array);
-GetMax(array);
-GetMin(array);
-Console.WriteLine($"Max - min = {GetMax(array) - GetMin(array)} ");
-int GetMax(int[] array)
+double FindMin(double[] array)
 {
-	int Max = array[0];
-	for (int i = 0; i < array.Length; i++)
-		if (Max < array[i] )
-		{ 
-			Max = array[i];
-		}
-		return Max;
+    double min = double.MaxValue;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < min)
+        {
+            min = array[i];
+        }
+    }
+    return min;
 }
 
-int GetMin(int[] array)
+double FindMax(double[] array)
 {
-	int Min = array[0];
-	for (int i = 0; i < array.Length; i++)
-				if (Min > array[i])
-				{
-				Min = array[i];
-				}
-	return Min;
+    double max = double.MinValue;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max)
+        {
+            max = array[i];
+
+        }
+    }
+    return max;
 }
+
+double[] array = CreateArray(10);
+Console.WriteLine(GetArray(array));
+Console.WriteLine($"Разница между max и min: " + (Math.Round((FindMax(array) - FindMin(array)), 2)));
