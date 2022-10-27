@@ -1,23 +1,23 @@
-/*Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+﻿/* Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 
 [345, 897, 568, 234] -> 2*/
 
-Console.WriteLine("Insert number of array elements = ");
-Console.WriteLine();
-int n = int.Parse(Console.ReadLine());
-int[] CreateArray()
+int[] array = new int[10];
+
+int[] CreateArray(int[] array)
 {
-    int[] array = new int[n];
-    Random r = new Random();
-    for (int i = 0; i < n; i++)
-    {
-            array[i] = r.Next(100, 999);
-        }
-    return array;
+	Random random = new Random();
+
+	for (int i = 0; i < array.Length; i++)
+	{
+		array[i] = random.Next(100, 999);
+	}
+	return array;
 }
 
 void PrintArray(int[] array)
 {
+
     for (int i = 0; i < n; i++)
     {
     Console.Write(array[i] + " ");
@@ -41,3 +41,26 @@ int result = 0;
 int[] array = CreateArray();
 PrintArray(array);
 Console.WriteLine();
+
+	for (int i = 0; i < array.Length; i++)
+			{
+			Console.Write(array[i] + " ");
+		}
+		Console.WriteLine();
+}
+CreateArray(array);
+PrintArray(array);
+GetEvenCount(array);
+
+Console.WriteLine($"Count of even numbers is = {GetEvenCount(array)} ");
+int GetEvenCount(int[] array)
+{
+	int count = 0;
+	for (int i = 0; i < array.Length; i++)
+		if ((array[i] % 2) == 0)
+		{ 
+			count++;
+		}
+		return count;
+}
+
