@@ -3,8 +3,7 @@
  b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 */
 
-Console.WriteLine("Input __ b1, k1, b2, k2 ");
-//int[] str = Console.ReadLine().Split().Select(int.Parse).ToArray();
+Console.WriteLine("Input values b1, k1, b2, k2 ");
 int b1 = int.Parse(Console.ReadLine());
 int k1 = int.Parse(Console.ReadLine());
 int b2 = int.Parse(Console.ReadLine());
@@ -15,7 +14,8 @@ void CrossPoint(int b1, int k1, int b2, int k2)
             {
                 int x = (b2 - b1) / (k1 - k2);
                 int y = (k1 * x + b1);
-                Console.WriteLine(x, y);
+                Console.WriteLine($"X = {x}");
+                Console.WriteLine($"Y  = {y}");
             }
             else Console.WriteLine("Lines are parallel");
     }
@@ -51,7 +51,7 @@ CrossPoint(b1, k1, b2, k2);
 
 
 
-
+//int[] str = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
 
 

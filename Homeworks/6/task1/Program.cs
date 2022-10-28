@@ -5,6 +5,30 @@
  1, -7, 567, 89, 223-> 3
 */
 
+
+
+Console.WriteLine("Input elements ('_'required: ");
+int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+int count = 0;
+ 
+for (int i = 0; i < arr.Length; i++)
+{
+    if (arr[i] > 0)
+    {
+        count++;
+    }
+}
+ Console.WriteLine($"Count of elements more then null is {count}");
+
+
+
+
+
+
+
+
+
+
 /*Console.Write("Input numbers(w/ _ btw): ");
 int[] array = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
 int count = 0;
@@ -23,20 +47,17 @@ Console.WriteLine($"Amount of numbers over null = {count}");
 /*/ See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 */
+
+
+
+
+
+
+
+
+
+
 /*
-Console.Write("Введите элементы(через пробел): ");
-int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-int count = 0;
- 
-for (int i = 0; i < arr.Length; i++)
-{
-    if (arr[i] > 0)
-    {
-        count++;
-    }
-}
- Console.WriteLine($"Кол-во элементов > 0: {count}");
-*/
 Console.Write("Введите числа через запятую: ");
 int[] numbers = StringToNum(Console.ReadLine());
 PrintArray(numbers);
@@ -98,4 +119,4 @@ void PrintArray(int[] array)
         Console.Write(array[i] + " ");
     }
     Console.Write("]");
-}
+}*/
