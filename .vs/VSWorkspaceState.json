@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Homeworks",
-    "\\Homeworks\\3",
-    "\\Homeworks\\3\\task1",
+    "\\Homeworks\\4",
+    "\\Homeworks\\5",
+    "\\Homeworks\\5\\task1",
+    "\\Homeworks\\5\\task2",
+    "\\Homeworks\\5\\task3",
     "\\Seminars",
-    "\\Seminars\\2",
-    "\\Seminars\\3",
-    "\\Seminars\\6",
-    "\\Seminars\\6\\1",
-    "\\Seminars\\6\\7"
+    "\\Seminars\\8",
+    "\\Seminars\\8\\3"
   ],
-  "SelectedNode": "\\Seminars\\6\\1\\Program.cs",
+  "SelectedNode": "\\Homeworks\\5\\task1\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

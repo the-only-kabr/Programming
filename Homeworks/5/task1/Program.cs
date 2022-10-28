@@ -1,4 +1,4 @@
-﻿/* Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+/* Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 
 [345, 897, 568, 234] -> 2*/
 
@@ -18,36 +18,26 @@ int[] CreateArray(int[] array)
 void PrintArray(int[] array)
 {
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < array.Length; i++)
     {
     Console.Write(array[i] + " ");
         Console.WriteLine();
     }
 }
 
-void FindEvens(int[], array)
-int result = 0;
-{
-    for (int i = 0; i < n; i++)
+void FindEvens(int[] array)
+
+{	int result = 0;
+    for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 2 = 0)
+        if ((array[i] % 2) == 0)
         {
-            result +=        
+            result += array[i];
         }
     }
-    return result;
+    return;
 }
 
-int[] array = CreateArray();
-PrintArray(array);
-Console.WriteLine();
-
-	for (int i = 0; i < array.Length; i++)
-			{
-			Console.Write(array[i] + " ");
-		}
-		Console.WriteLine();
-}
 CreateArray(array);
 PrintArray(array);
 GetEvenCount(array);
