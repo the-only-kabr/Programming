@@ -1,75 +1,53 @@
-﻿/*
-Дополнительно Напишите программу выводящую треугольник Паскаля
+﻿/* Задача 62. Напишите программу, которая заполнит
+ спирально массив 4 на 4.
+Например, на выходе получается вот такой массив:
+01 02 03 04
+12 13 14 05
+11 16 15 06
+10 09 08 07
 */
-Console.Clear();
-Console.WriteLine($"Дополнительная задача 61: Вывести первые N строк треугольника Паскаля. Сделать вывод в виде равнобедренного треугольника.");
-
-int n = InputNumbers("Введите количество строк: ");
-
-double[,] pascalTriangle = new double[n + 1, 2 * n + 1];
-
-FillPascalTriangle(pascalTriangle);
-
+Console.WriteLine("enter m");
+int m = int.Parse(Console.ReadLine());
 Console.WriteLine();
-WriteArray(pascalTriangle);
 
-TransformationPascalTriangle(pascalTriangle);
 
-Console.WriteLine();
-WriteArray(pascalTriangle);
-
-void TransformationPascalTriangle(double[,] array)
+int[,] GetSquareArray(int m)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    int count = 0;
-    for (int j = array.GetLength(1) - 1; j >= 0; j--)
+    int[,] array = new int[m, m];
+   int c=1; int i=0; int j=0;
+   int count;
+    while (m>1)  
+   {
+        for (count =0; count<m-1;count ++)
+                 { array [i,j]=c; c++;j++; } 
+        for (count = 0; count<m-1;count ++)
+                 {array[ i, j] = c; c++; i++;} 
+        for (count =0; count<m-1; count ++)
+                 {array[ i, j] = c; c++; j--; } 
+        for (count =0; count<m-1; count ++)
+                 {array[ i, j] = c; c++; i--;} 
+       i++; j++;
+       m-=2;
+   }
+    return array;
+}
+
+
+
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-      if (array[i, j] != 0)
-      {
-        array[i, array.GetLength(1) / 2 + j - count] = array[i, j];
-        array[i, j] = 0;
-        count++;
-      }
-    }
-  }
-  array[array.GetLength(0) - 1, 0] = 1;
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+           Console.Write($"{array[i,j]} ");
+        }
+       Console.WriteLine();
+    } 
+    
 }
 
-void FillPascalTriangle(double[,] pascalTriangle)
-{
-  for (int k = 0; k < pascalTriangle.GetLength(0); k++)
-  {
-    pascalTriangle[k, 0] = 1;
-  }
-  for (int i = 1; i < pascalTriangle.GetLength(0); i++)
-  {
-    for (int j = 1; j < i + 1; j++)
-    {
-      pascalTriangle[i, j] = pascalTriangle[i - 1, j] + pascalTriangle[i - 1, j - 1];
-    }
-  }
-}
+PrintArray(GetSquareArray(m));
 
-void WriteArray(double[,] array)
-{
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-      if (array[i, j] != 0)
-      {
-          Console.Write($"{array[i, j]} ");
-      }
-      else Console.Write("  ");
-    }
-    Console.WriteLine();
-  }
-}
 
-int InputNumbers(string input)
-{
-  Console.Write(input);
-  int output = Convert.ToInt32(Console.ReadLine());
-  return output;
-}

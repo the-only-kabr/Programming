@@ -1,56 +1,73 @@
-﻿/*Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
- * Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
-Массив размером 2 x 2 x 2
-66(0,0,0) 25(0,1,0)
-34(1,0,0) 41(1,1,0)
-27(0,0,1) 90(0,1,1)
-26(1,0,1) 55(1,1,1)
-*/
-int[, ,] CreateArray(int m, int n, int p)
-{ int[, ,] array = new int[m, n, p];
+﻿/*Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+Например, даны 2 матрицы:
+2 4 | 3 4
+3 2 | 3 3
+Результирующая матрица будет:
+18 20
+15 18   */
+Console.WriteLine("enter m1, n1");
+int m1 = int.Parse(Console.ReadLine());
+int n1 = int.Parse(Console.ReadLine());
+Console.WriteLine("enter m2, n2");
+int m2 = int.Parse(Console.ReadLine());
+int n2 = int.Parse(Console.ReadLine());
+Console.WriteLine();
+
+int[,] GetArray(int m, int n)
+{
+    int[,] array = new int[m, n];
     Random rnd = new Random();
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-       for (int j = 0; j < n; j++)
-        { 
-            for ( int k = 0; k < p; k++)
-            {
-              array[i, j, k] = rnd.Next(10, 99);
-                        
-            } 
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = rnd.Next(1, 10);
         }
     }
     return array;
 }
-void PrintArray(int[, ,] array)
+
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
-	{
-                for (int j = 0; j < array.GetLength(1); j++)
-			    {
-                    for (int k = 0; k < array.GetLength(2); k++)
-                            {
-                        Console.Write($"{array[i, j, k]}({i}, {j}, {k})  ");
-                        
-		                   }
-                Console.WriteLine();
-                }
-
-    }
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+           Console.Write($"{array[i,j]} ");
+        }
+       Console.WriteLine();
+    } 
     
 }
 
-int[, ,] array = CreateArray(2, 2, 2);
-Contains(array); 
-PrintArray(array);
+int [,] ProdArray (int[,] array1, int[,] array2)
 
-int[, ,] Contains(int[, ,] array) 
- {   for (int i = 0; i < array.GetLength(0); i++)
-        {for (int j = 0; j < array.GetLength(1); j++)
-            {for  (int k = 0; k < array.GetLength(2); k++)
-                {if (array[i, j, k] == array[i, j, k])
-                    return;
+{
+    if  ((array1.GetLength(1)==array2.GetLength(0))==true) 
+    {
+        int [,] newArray = new int [array1.GetLength(0),array2.GetLength(1)];
+        
+        for (int i=0; i<array1.GetLength(0); i++)  
+        {  
+            for (int j=0; j<array2.GetLength(1); j++)
+            {
+                for (int k=0; k<array2.GetLength(0); k++)
+                {
+                    newArray[i,j]+=array1[i,k]*array2[k,j];
+
                 }
             }
         }
+        return newArray;
+    }
+    else Console.WriteLine("Matrixes production isn't possible");
+    return array1;
 }
+
+int [,] array1= GetArray(m1,n1);
+int [,] array2= GetArray(m2,n2);
+PrintArray(array1);
+Console.WriteLine();  
+PrintArray(array2);
+Console.WriteLine();  
+PrintArray(ProdArray(array1,array2));

@@ -1,48 +1,56 @@
-﻿/*/Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
-Например, на выходе получается вот такой массив:
-01 02 03 04
-12 13 14 05
-11 16 15 06
-10 09 08 07
+﻿/*Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+ * Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+Массив размером 2 x 2 x 2
+66(0,0,0) 25(0,1,0)
+34(1,0,0) 41(1,1,0)
+27(0,0,1) 90(0,1,1)
+26(1,0,1) 55(1,1,1)
 */
-Console.Clear();
-Console.WriteLine($"Задача 62: Заполните спирально массив 4 на 4.");
-
-int n = 4;
-int[,] SquareMatrix = new int[n, n];
-
-int temp = 1;
-int i = 0;
-int j = 0;
-
-while (temp <= SquareMatrix.GetLength(0) * SquareMatrix.GetLength(1))
-{
-  SquareMatrix[i, j] = temp;
-  temp++;
-  if (i <= j + 1 && i + j < SquareMatrix.GetLength(1) - 1)
-    j++;
-  else if (i < j && i + j >= SquareMatrix.GetLength(0) - 1)
-    i++;
-  else if (i >= j && i + j > SquareMatrix.GetLength(1) - 1)
-    j--;
-  else
-    i--;
-}
-
-PrintArray(SquareMatrix);
-
-void PrintArray (int[,] array)
-{
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
+int[, ,] CreateArray(int m, int n, int p)
+{ int[, ,] array = new int[m, n, p];
+    Random rnd = new Random();
+    for (int i = 0; i < m; i++)
     {
-      if (array[i,j] / 10 <= 0)
-      Console.Write($" {array[i,j]} ");
-
-      else Console.Write($"{array[i,j]} ");
+       for (int j = 0; j < n; j++)
+        { 
+            for ( int k = 0; k < p; k++)
+            {
+              array[i, j, k] = rnd.Next(10, 99);
+                        
+            } 
+        }
     }
-    Console.WriteLine();
-  }
+    return array;
+}
+void PrintArray(int[, ,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+	{
+                for (int j = 0; j < array.GetLength(1); j++)
+			    {
+                    for (int k = 0; k < array.GetLength(2); k++)
+                            {
+                        Console.Write($"{array[i, j, k]}({i}, {j}, {k})  ");
+                        
+		                   }
+                Console.WriteLine();
+                }
+
+    }
+    
 }
 
+int[, ,] array = CreateArray(2, 2, 2);
+//Contains(array); 
+PrintArray(array);
+
+/*int[, ,] Contains(int[, ,] array) 
+ {   for (int i = 0; i < array.GetLength(0); i++)
+        {for (int j = 0; j < array.GetLength(1); j++)
+            {for  (int k = 0; k < array.GetLength(2); k++)
+                {if (array[i, j, k] == array[i, j, k])
+                    return;
+                }
+            }
+        }
+}*/
