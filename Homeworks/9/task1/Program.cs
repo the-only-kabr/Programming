@@ -3,15 +3,14 @@ N = 5 -> "5, 4, 3, 2, 1"
 N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 */
 
-//using System.Security.Cryptography;
-
+Console.WriteLine("enter n");
 int n = int.Parse(Console.ReadLine());
 
-void LineNumbers(int n)
-{
-    if (n == 0) { System.Console.WriteLine(n); return; }
-    LineNumbers(n);
-    System.Console.WriteLine(n);
+void LineNumbers (int n)
+{   int a=1;
+    if (a==n) {Console.WriteLine(n); return;}
+    LineNumbers(n-1);
+    Console.WriteLine(n); 
 }
 
 LineNumbers(n);
